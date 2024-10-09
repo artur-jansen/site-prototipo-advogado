@@ -1,0 +1,541 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+    --verde: #0D6410;
+    --dourado: #d88c00;
+    --branco: #ffffff;
+    --verde-escuro: #023504;
+    --cinza: #494949;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inria Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    height: 100%;
+}
+
+section{
+    min-height: 100vh;
+    padding: 1em;
+}
+
+h1, h2{
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 900;
+}
+
+p{
+    font-weight: 400; 
+    font-size: 1.2em;
+}
+
+.botao-whatsapp{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10000;
+    background-color: #00FF00;
+    padding: 6px 12px;
+    border-radius: 100%;
+    border: none;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.33);
+    font-size: 2em;
+}
+
+.botao-whatsapp a{
+    color: var(--branco);
+    text-decoration: none;
+}
+
+.botao-topo{
+    opacity: 0;
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    z-index: 10000;
+    background-color: #f0f0f0;
+    padding: 6px 12px;
+    border-radius: 100%;
+    border: none;
+    box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.83);
+    font-size: 2em;
+}
+
+.botao-topo a{
+    color: var(--verde);
+    text-decoration: none;
+}
+
+.botao-topo:hover, .botao-whatsapp:hover{
+    background-color: var(--verde);
+    box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.33);
+}
+
+.botao-topo:hover a{
+    color: var(--branco);
+}
+
+.botao-topo.scrolled{
+    transition: 1s;
+    opacity: 1;
+}
+
+.doisdev-link{
+    color: var(--branco);
+}
+
+.pulsar {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+/* HERO */
+#hero{
+    background-image: url(./assets/mobile/fundo-secao-hero.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    padding: 3em 1em 0 1em;
+}
+
+.hero-logo{
+    width: 30%;
+}
+
+.hero-titulo{
+    color: var(--branco);
+    text-align: center;
+    font-weight: 800;
+}
+
+.hero-paragrafo{
+    color: var(--branco);
+    font-size: 1.3em;
+}
+
+.botoes{
+    display: flex;
+    gap: 1em;
+}
+
+.botao-borda{
+    background-color: transparent;
+    border-radius: 12px;
+    border: 3px solid var(--dourado);
+    padding: 6px;
+}
+
+.botao-borda a{
+    font-family: "Open Sans", sans-serif;
+    color: var(--branco);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.botao-preenche{
+    font-family: "Open Sans", sans-serif;
+    background-color: var(--dourado);
+    color: var(--branco);
+    border-radius: 12px;
+    border: none;
+    padding: 6px;
+    font-weight: 700;
+}
+
+.botao-preenche a{
+    font-family: "Open Sans", sans-serif;
+    color: var(--branco);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* DUVIDAS */
+#duvidas{
+    background-image: url(./assets/mobile/fundo-secao-duvidas.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.duvidas-titulo{
+    color: var(--branco);
+    font-weight: 800;
+}
+
+.duvidas-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    margin-top: 3em;
+}
+
+#duvidas-input{
+    background-color: #ffffff40;
+    border: 2px solid var(--dourado);
+    border-radius: 12px;
+    padding: 6px;
+    color: var(--branco);
+    text-align: center;
+}
+
+#duvidas-input::placeholder{
+    color: var(--branco);
+    text-align: center;
+}
+
+#duvidas-input:focus{
+    border: 2px solid var(--dourado);
+    background-color: var(--branco);
+    color: #000;
+}
+
+.duvidas-container-cards{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.duvidas-cards{
+    background-color: var(--dourado);
+    color: var(--branco);
+    border-radius: 8px;
+}
+
+.card-body{
+    margin: 1em;
+}
+
+.card-title{
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    padding-bottom: 0.5em;
+}
+
+.btnSaibaMaisDuvidas{
+    width: 100%;
+    background-color: var(--branco);
+    color: var(--dourado);
+    font-family: "Open Sans", sans-serif;
+    border-radius: 12px;
+    border: none;
+    padding: 6px;
+    font-weight: 700;
+}
+
+.btnSaibaMaisDuvidas:hover, .btnSaibaMaisDuvidas:focus{
+    transition: 1s;
+    background-color: var(--dourado);
+    color: var(--branco);
+    border: 3px solid var(--branco);
+}
+
+/* SOBRE */
+#sobre{
+    background-image: url(./assets/mobile/fundo-secao-formacoes.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 1em 0 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sobre-titulo{
+    color: var(--branco);
+    font-weight: 800;
+    text-align: center;
+}
+
+.sobre-container-cards{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    padding: 1em;
+}
+
+.sobre-card-form-exp{
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    background-color: var(--branco);
+    color: var(--verde);
+    padding: 6px 10px;
+    border-radius: 6px;
+    text-align: center;
+    width: 250px;
+}
+
+.sobre-card{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sobre-card-container-titulo{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 1em;
+}
+
+.sobre-card-icon{
+    background-color: var(--branco);
+    color: var(--verde);
+    font-size: 2em;
+    border-radius: 6px 0px 6px 0px;
+    padding: 2px 8px;
+}
+
+.sobre-card-titulo{
+    font-family: "Open Sans", sans-serif;
+    font-weight: 800;
+    font-size: 1.2em;
+    color: var(--branco);
+}
+
+.sobre-card-texto{
+    color: var(--branco);
+    margin: 0;
+    font-size: 1.3em;
+    font-weight: 300;
+}
+
+.sobre-experiencias{
+    background-image: url(./assets/mobile/fundo-secao-experiencias.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 1em;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+.accordion{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.accordion-item{
+    border: none !important;
+    border-radius: 12px !important;
+}
+
+.accordion-button{
+    background-color: var(--branco) !important;
+    color: var(--verde) !important;
+    box-shadow: none !important;
+    border: none !important;
+    border-radius: 12px !important;
+}
+
+.accordion-button:hover{
+    background: var(--verde) !important;
+    color: var(--branco) !important;
+}
+
+/* AREAS DE ATUACAO */
+#areas-atuacao{
+    background-image: url(./assets/mobile/fundo-secao-atuacao.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.areas-atuacao-titulo{
+    color: var(--branco);
+    font-weight: 800;
+    text-align: center;
+    padding-bottom: 1em;
+}
+
+.areas-atuacao-cards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+}
+
+.areas-atuacao-card{
+    background-color: #ffffff3f;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1em;
+    padding: 12px;
+    color: var(--branco);
+    border: 3px solid var(--branco);
+    border-radius: 0px 12px 0px 12px;
+}
+
+.areas-atuacao-card:hover, .areas-atuacao-card:focus, .areas-atuacao-card.active{
+    transition: 1s;
+    border: 3px solid transparent;
+}
+
+.areas-atuacao-card:hover .areas-atuacao-card-titulo,
+.areas-atuacao-card:focus .areas-atuacao-card-titulo,
+.areas-atuacao-card.active .areas-atuacao-card-titulo {
+    transition: 1s;
+    color: var(--dourado);
+}
+
+.areas-atuacao-card:hover .areas-atuacao-card-texto,
+.areas-atuacao-card:focus .areas-atuacao-card-texto,
+.areas-atuacao-card.active .areas-atuacao-card-texto {
+    transition: 1s;
+    color: var(--branco);
+}
+
+.areas-atuacao-card-titulo{
+    font-family: "Open Sans", sans-serif;
+    font-weight: 800;
+    font-size: 1.2em;
+    color: var(--branco);
+}
+
+.areas-atuacao-card-texto{
+    font-weight: 600;
+    color: var(--dourado);
+}
+
+/* MOTIVOS */
+#motivos{
+    background-color: var(--branco);
+}
+
+.motivos-titulo{
+    color: var(--verde);
+    font-weight: 800;
+    padding-bottom: 1em;
+}
+
+.motivos-cards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+}
+
+.motivos-card{
+    background-color: var(--verde-escuro);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1em;
+    padding: 12px;
+    border: 3px solid var(--dourado);
+    border-radius: 0px 12px 0px 12px;
+}
+
+.motivos-card:hover, .motivos-card:focus, .motivos-card.active{
+    transition: 1s;
+    background-color: var(--cinza);
+}
+
+.motivos-card:hover .motivos-card-titulo,
+.motivos-card:focus .motivos-card-titulo,
+.motivos-card.active .motivos-card-titulo {
+    transition: 1s;
+    color: var(--dourado);
+}
+
+.motivos-card:hover .motivos-card-texto,
+.motivos-card:focus .motivos-card-texto,
+.motivos-card.active .motivos-card-texto {
+    transition: 1s;
+    color: var(--branco);
+}
+
+.motivos-card-titulo{
+    font-family: "Open Sans", sans-serif;
+    font-weight: 800;
+    font-size: 1.2em;
+    color: var(--dourado);
+}
+
+.motivos-card-texto{
+    color: var(--branco);
+    display: flex;
+    align-items: baseline;
+    margin: 0;
+    gap: 0.2em;
+}
+
+.motivos-card-icon{
+    color: var(--dourado);
+}
+
+/* CONTATO */
+#contato{
+    background-image: url(./assets/mobile/fundo-secao-contato.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.contato-titulo{
+    color: var(--branco);
+    font-weight: 800;
+}
+
+/* FOOTER */
+
+footer{
+    width: 100%;
+    background-color: var(--dourado);
+    color: var(--branco);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-texto{
+    margin: 0;
+    font-size: 1em;
+}
