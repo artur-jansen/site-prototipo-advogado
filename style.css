@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 :root {
-    --verde: #0D6410;
+    --verde: #0d6410;
     --dourado: #d88c00;
     --branco: #ffffff;
     --verde-escuro: #023504;
@@ -48,7 +48,7 @@ p{
     right: 20px;
     z-index: 10000;
     background-color: #00FF00;
-    padding: 6px 12px;
+    padding: 6px 12px 4px 12px;
     border-radius: 100%;
     border: none;
     box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.33);
@@ -121,6 +121,19 @@ p{
     align-items: center;
     gap: 2em;
     padding: 3em 1em 0 1em;
+    position: relative;
+}
+
+#hero::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 180px;
+    background: linear-gradient(to bottom, rgb(1, 60, 14), transparent);
+    z-index: 1;
+    transform: rotate(180deg);
 }
 
 .hero-logo{
@@ -176,10 +189,22 @@ p{
 
 /* DUVIDAS */
 #duvidas{
+    position: relative;
     background-image: url(./assets/mobile/fundo-secao-duvidas.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+#duvidas::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(to bottom, rgb(1, 60, 14), transparent);
+    z-index: 1;
 }
 
 .duvidas-titulo{
@@ -358,16 +383,16 @@ p{
 }
 
 .accordion-button{
-    background-color: var(--branco) !important;
-    color: var(--verde) !important;
+    background-color: var(--dourado) !important;
+    color: var(--branco) !important;
     box-shadow: none !important;
     border: none !important;
     border-radius: 12px !important;
 }
 
 .accordion-button:hover{
-    background: var(--verde) !important;
-    color: var(--branco) !important;
+    background: var(--branco) !important;
+    color: var(--dourado) !important;
 }
 
 /* AREAS DE ATUACAO */
@@ -393,7 +418,7 @@ p{
 }
 
 .areas-atuacao-card{
-    background-color: #ffffff3f;
+    background-color: #0707074e;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -406,6 +431,7 @@ p{
     color: var(--branco);
     border: 3px solid var(--branco);
     border-radius: 0px 12px 0px 12px;
+    cursor: pointer;
 }
 
 .areas-atuacao-card:hover, .areas-atuacao-card:focus, .areas-atuacao-card.active{
@@ -441,11 +467,27 @@ p{
 
 /* MOTIVOS */
 #motivos{
-    background-color: var(--branco);
+    background-image: url(./assets/mobile/fundo-secao-motivos.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+#motivos::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    background: linear-gradient(to bottom, rgba(88, 152, 90, 0.344), transparent);
+    z-index: 1;
+    transform: rotate(180deg);
 }
 
 .motivos-titulo{
-    color: var(--verde);
+    color: var(--branco);
     font-weight: 800;
     padding-bottom: 1em;
 }
@@ -470,6 +512,7 @@ p{
     padding: 12px;
     border: 3px solid var(--dourado);
     border-radius: 0px 12px 0px 12px;
+    cursor: pointer;
 }
 
 .motivos-card:hover, .motivos-card:focus, .motivos-card.active{
@@ -516,11 +559,101 @@ p{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    position: relative;
+}
+
+#contato::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    background: linear-gradient(to bottom, rgba(88, 152, 90, 0.518), transparent);
+    z-index: 1;
 }
 
 .contato-titulo{
     color: var(--branco);
     font-weight: 800;
+    padding-bottom: 1em;
+}
+
+.contato-container-divs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+}
+
+.contato-container-titulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3em;
+    color: var(--branco);
+}
+
+.contato-titulo2{
+    font-family: "Open Sans", sans-serif;
+    font-weight: 800;
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.contato-icon{
+    font-size: 1.5em;
+}
+
+.contato-localizacao, .contato-contato{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.contato-topicos{
+    color: var(--branco);
+}
+
+.contato-topicos-icons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    padding-bottom: 1em;
+}
+
+.contato-topicos-icons a{
+    text-decoration: none;
+    color: var(--branco);
+    background-color: #ffffff3f;
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+
+.contato-topicos-icons a:hover{
+    color: var(--verde);
+}
+
+.contato-topico-icon{
+    font-size: 2em;
+}
+
+.contato-topicos-titulo{
+    font-family: "Open Sans", sans-serif;
+}
+
+.contato-barrinha{
+    width: 100%;
+    height: 2px;
+    background-color: var(--branco);
+}
+
+.contato-mapa{
+    width: 100%;
+    height: 200px;
+    border: none;
+    border-radius: 12px;
 }
 
 /* FOOTER */

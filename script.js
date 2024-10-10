@@ -40,19 +40,21 @@ typeWriter();
 const botaoSaibaMaisDuvidas = document.querySelectorAll('.btnSaibaMaisDuvidas');
 const whatsAppBtn = document.querySelector('.botao-whatsapp');
 
-botaoSaibaMaisDuvidas.addEventListener('click', function () {
-    topoBtn.style.display = 'none';
-    whatsAppBtn.style.display = 'none';
-})
+botaoSaibaMaisDuvidas.forEach(button => {
+    button.addEventListener('click', function () {
+        if (topoBtn) topoBtn.style.display = 'none';
+        if (whatsAppBtn) whatsAppBtn.style.display = 'none';
+    });
+});
 
 const modals = document.querySelectorAll('.modal');
 
 modals.forEach(modal => {
     modal.addEventListener('hidden.bs.modal', function() {
-        topoBtn.style.display = 'flex';
-        whatsAppBtn.style.display = 'flex';
-    })
-})
+        if (topoBtn) topoBtn.style.display = 'flex';
+        if (whatsAppBtn) whatsAppBtn.style.display = 'flex';
+    });
+});
 
 function toggleActive(element) {
     element.classList.toggle('active');
