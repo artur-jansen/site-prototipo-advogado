@@ -13,6 +13,9 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" rel="stylesheet">
     <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 </head>
 
 <body>
@@ -24,7 +27,9 @@
             <img class="hero-logo" src="./assets/logo.png"
                 alt="Logo do advogado Ricardo Almeida, contem: 'RA e abaixo o nome 'DIREITO AMBIENTAL''">
             <h1 class="hero-titulo">ESPECIALISTA EM DIREITO AMBIENTAL</h1>
-            <p class="hero-paragrafo"></p>
+            <p class="hero-paragrafo texto"
+                data-text="Sou Ricardo Almeida, advogado especializado em Direito Ambiental, e estou comprometido com soluções legais sustentáveis e eficazes. Agende uma consulta para saber mais.">
+            </p>
             <div class="botoes">
                 <button class="botao-borda hvr-skew-forward"><a href="#duvidas">EXPLORE O SITE</a></button>
                 <button class="botao-preenche hvr-skew-backward"><a target="_blank" href="https://instagram.com">ENTRE
@@ -73,7 +78,7 @@
                                         maior fiscalização.</p>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary"
+                                    <button type="button" class="botao-preenche"
                                         data-bs-dismiss="modal">Fechar</button>
                                 </div>
                             </div>
@@ -113,7 +118,7 @@
                                         pública.</p>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary"
+                                    <button type="button" class="botao-preenche"
                                         data-bs-dismiss="modal">Fechar</button>
                                 </div>
                             </div>
@@ -152,7 +157,7 @@
                                         eficazes.</p>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary"
+                                    <button type="button" class="botao-preenche"
                                         data-bs-dismiss="modal">Fechar</button>
                                 </div>
                             </div>
@@ -192,7 +197,7 @@
                                         preservação.</p>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary"
+                                    <button type="button" class="botao-preenche"
                                         data-bs-dismiss="modal">Fechar</button>
                                 </div>
                             </div>
@@ -230,7 +235,7 @@
                                         patrimônio natural do país.</p>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary"
+                                    <button type="button" class="botao-preenche"
                                         data-bs-dismiss="modal">Fechar</button>
                                 </div>
                             </div>
@@ -270,7 +275,7 @@
                                         envolvimento das comunidades locais na conservação.</p>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary"
+                                    <button type="button" class="botao-preenche"
                                         data-bs-dismiss="modal">Fechar</button>
                                 </div>
                             </div>
@@ -309,7 +314,7 @@
                                         impulsionar o crescimento sustentável do setor.</p>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary"
+                                    <button type="button" class="botao-preenche"
                                         data-bs-dismiss="modal">Fechar</button>
                                 </div>
                             </div>
@@ -348,7 +353,7 @@
                                         governos e empresas para maximizar seu impacto.</p>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary"
+                                    <button type="button" class="botao-preenche"
                                         data-bs-dismiss="modal">Fechar</button>
                                 </div>
                             </div>
@@ -498,30 +503,236 @@
         </section>
         <section id="areas-atuacao">
             <h2 class="areas-atuacao-titulo" data-aos="zoom-in">ÁREAS DE ATUAÇÃO</h2>
-            <div class="areas-atuacao-cards">
-                <div class="areas-atuacao-card" onclick="toggleActive(this)">
-                    <h3 class="areas-atuacao-card-titulo">Consultoria em Licenciamento Ambiental</h3>
-                    <p class="areas-atuacao-card-texto">
-                        Ofereço consultoria especializada para empresas que buscam cumprir com as exigências legais de
-                        licenciamento ambiental, ajudando a minimizar riscos e garantir operações sustentáveis.
-                    </p>
+            <div class="areas-atuacao-container">
+                <p class="areas-atuacao-texto texto"
+                    data-text="Como advogado especializado em Direito Ambiental, ofereço serviços que promovem práticas sustentáveis e garantem a conformidade legal. Minha atuação inclui licenciamento ambiental e defesa em ações judiciais, sempre visando proteger o meio ambiente. Explore as áreas de atuação abaixo para ver como posso ajudar sua organização a enfrentar desafios ambientais de forma eficaz.">
+                </p>
+                <div class="owl-carousel owl-theme">
+                    <div class="areas-atuacao-card">
+                        <h3 class="areas-atuacao-card-titulo">Licenciamento Ambiental</h3>
+                        <img class="areas-atuacao-card-icon" src="./assets/icon-1.png"
+                            alt="Icon laranja relacionado ao titulo do card">
+                        <button type="button" class="areas-atuacao-card-botao" data-bs-toggle="modal"
+                            data-bs-target="#modal21">
+                            Leia mais sobre...
+                        </button>
+                    </div>
+                    <div class="modal fade" id="modal21" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Licenciamento Ambiental</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Ajudo empresas a navegar pelo complexo processo de licenciamento ambiental, garantindo que suas operações estejam em conformidade com as regulamentações e minimizando impactos ao meio ambiente.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="botao-preenche"
+                                        data-bs-dismiss="modal">Fechar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="areas-atuacao-card">
+                        <h3 class="areas-atuacao-card-titulo">Consultoria em Sustentabilidade</h3>
+                        <img class="areas-atuacao-card-icon" src="./assets/icon-2.png"
+                            alt="Icon laranja relacionado ao titulo do card">
+                        <button type="button" class="areas-atuacao-card-botao" data-bs-toggle="modal"
+                            data-bs-target="#modal22">
+                            Leia mais sobre...
+                        </button>
+                    </div>
+                    <div class="modal fade" id="modal22" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Consultoria em Sustentabilidade</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Ofereço consultoria para implementar práticas sustentáveis que não apenas atendem às exigências legais, mas também promovem a responsabilidade social e ambiental dentro da sua organização.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="botao-preenche"
+                                        data-bs-dismiss="modal">Fechar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="areas-atuacao-card">
+                        <h3 class="areas-atuacao-card-titulo">Defesa em Ações Ambientais</h3>
+                        <img class="areas-atuacao-card-icon" src="./assets/icon-3.png"
+                            alt="Icon laranja relacionado ao titulo do card">
+                        <button type="button" class="areas-atuacao-card-botao" data-bs-toggle="modal"
+                            data-bs-target="#modal23">
+                            Leia mais sobre...
+                        </button>
+                    </div>
+                    <div class="modal fade" id="modal23" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Defesa em Ações Ambientais</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Atuo na defesa de clientes em ações judiciais e administrativas relacionadas a questões ambientais, sempre buscando soluções justas e eficazes que protejam seus interesses e o meio ambiente.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="botao-preenche"
+                                        data-bs-dismiss="modal">Fechar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="areas-atuacao-card">
+                        <h3 class="areas-atuacao-card-titulo">Proteção de Áreas de Preservação</h3>
+                        <img class="areas-atuacao-card-icon" src="./assets/icon-4.png"
+                            alt="Icon laranja relacionado ao titulo do card">
+                        <button type="button" class="areas-atuacao-card-botao" data-bs-toggle="modal"
+                            data-bs-target="#modal24">
+                            Leia mais sobre...
+                        </button>
+                    </div>
+                    <div class="modal fade" id="modal24" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Proteção de Áreas de Preservação</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Trabalho para assegurar a proteção de Áreas de Preservação Permanente (APPs), ajudando a manter a integridade ecológica e a biodiversidade através de estratégias legais eficazes.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="botao-preenche"
+                                        data-bs-dismiss="modal">Fechar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="areas-atuacao-card">
+                        <h3 class="areas-atuacao-card-titulo">Gestão de Resíduos Sólidos</h3>
+                        <img class="areas-atuacao-card-icon" src="./assets/icon-5.png"
+                            alt="Icon laranja relacionado ao titulo do card">
+                        <button type="button" class="areas-atuacao-card-botao" data-bs-toggle="modal"
+                            data-bs-target="#modal25">
+                            Leia mais sobre...
+                        </button>
+                    </div>
+                    <div class="modal fade" id="modal25" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Gestão de Resíduos Sólidos</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Auxilio empresas na gestão de resíduos sólidos, desenvolvendo planos que promovem a reciclagem e a redução de resíduos, alinhando-se às melhores práticas ambientais.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="botao-preenche"
+                                        data-bs-dismiss="modal">Fechar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="areas-atuacao-card">
+                        <h3 class="areas-atuacao-card-titulo">Energias Renováveis</h3>
+                        <img class="areas-atuacao-card-icon" src="./assets/icon-6.png"
+                            alt="Icon laranja relacionado ao titulo do card">
+                        <button type="button" class="areas-atuacao-card-botao" data-bs-toggle="modal"
+                            data-bs-target="#modal26">
+                            Leia mais sobre...
+                        </button>
+                    </div>
+                    <div class="modal fade" id="modal26" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Energias Renováveis</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Assessorio projetos de energias renováveis, desde a fase de planejamento até a execução, garantindo que estejam em conformidade com as normas ambientais e contribuam para um futuro mais sustentável.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="botao-preenche"
+                                        data-bs-dismiss="modal">Fechar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="areas-atuacao-card">
+                        <h3 class="areas-atuacao-card-titulo">Conservação da Biodiversidade</h3>
+                        <img class="areas-atuacao-card-icon" src="./assets/icon-7.png"
+                            alt="Icon laranja relacionado ao titulo do card">
+                        <button type="button" class="areas-atuacao-card-botao" data-bs-toggle="modal"
+                            data-bs-target="#modal27">
+                            Leia mais sobre...
+                        </button>
+                    </div>
+                    <div class="modal fade" id="modal27" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Conservação da Biodiversidade</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Comprometido com a conservação da biodiversidade, trabalho para proteger espécies ameaçadas e ecossistemas, colaborando com ONGs e governos para implementar medidas de conservação efetivas.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="botao-preenche"
+                                        data-bs-dismiss="modal">Fechar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="areas-atuacao-card item">
+                        <h3 class="areas-atuacao-card-titulo">Educação e Conscientização Ambiental</h3>
+                        <img class="areas-atuacao-card-icon" src="./assets/icon-8.png"
+                            alt="Icon laranja relacionado ao titulo do card">
+                        <button type="button" class="areas-atuacao-card-botao" data-bs-toggle="modal"
+                            data-bs-target="#modal28">
+                            Leia mais sobre...
+                        </button>
+                    </div>
+                    <div class="modal fade" id="modal28" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Educação e Conscientização Ambiental</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Dedico-me a promover a educação e a conscientização ambiental, desenvolvendo programas que informam e capacitam comunidades e empresas sobre a importância da sustentabilidade e da proteção ambiental.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="botao-preenche"
+                                        data-bs-dismiss="modal">Fechar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="areas-atuacao-card" onclick="toggleActive(this)">
-                    <h3 class="areas-atuacao-card-titulo">Defesa em Ações Ambientais</h3>
-                    <p class="areas-atuacao-card-texto">
-                        Atuo na defesa de clientes em ações judiciais e administrativas relacionadas a questões
-                        ambientais, com o objetivo de proteger seus interesses e promover soluções justas e eficazes.
-                    </p>
-                </div>
-                <div class="areas-atuacao-card" onclick="toggleActive(this)">
-                    <h3 class="areas-atuacao-card-titulo">Assessoria em Conformidade e Sustentabilidade</h3>
-                    <p class="areas-atuacao-card-texto">
-                        Auxilio várias organizações nacionais na implementação de práticas sustentáveis e também na
-                        adequação às normas ambientais, promovendo a responsabilidade corporativa e a preservação dos
-                        recursos naturais.
-                    </p>
-                </div>
-            </div>
         </section>
         <section id="motivos">
             <h2 class="motivos-titulo" data-aos="zoom-in">PORQUE VOCÊ DEVE ME ESCOLHER</h2>
@@ -613,32 +824,39 @@
                         <h3 class="contato-titulo2">Contato</h3>
                     </div>
                     <div class="contato-topicos-icons">
-                        <a class="hvr-float"  href="wa.me/75991504950"><i class="bi bi-whatsapp contato-topico-icon"></i></a>
-                        <a class="hvr-float"  href="mailto:artur.jansenas@gmail.com"><i class="bi bi-envelope contato-topico-icon"></i></a>
-                        <a class="hvr-float" href="instagram.com/artur-jansen"><i class="bi bi-instagram contato-topico-icon"></i></a>
+                        <a class="hvr-float" href="wa.me/75991504950"><i
+                                class="bi bi-whatsapp contato-topico-icon"></i></a>
+                        <a class="hvr-float" href="mailto:artur.jansenas@gmail.com"><i
+                                class="bi bi-envelope contato-topico-icon"></i></a>
+                        <a class="hvr-float" href="instagram.com/artur-jansen"><i
+                                class="bi bi-instagram contato-topico-icon"></i></a>
                     </div>
                 </div>
             </div>
             <iframe class="contato-mapa"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.1973535855986!2d-46.659069223725226!3d-23.561354478799863!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1728505521109!5m2!1spt-BR!2sbr"
                 allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                <div class="calendly-inline-widget" data-url="https://calendly.com/doisdev7/marcar-uma-reuniao?primary_color=d88c00" style="min-width:320px;height:700px;"></div>
-            </body>
-        </section>
-    </main>
-    <footer>
-        <p class="footer-texto">&copy; 2024 Ricardo Almeida</p>
-        <p class="footer-texto">Desenvolvido por <a class="doisdev-link" target="_blank"
-                href="http://www.doisdev.com.br"> DoisDev</a></p>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-    <script src="script.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
+            <div class="calendly-inline-widget"
+                data-url="https://calendly.com/doisdev7/marcar-uma-reuniao?primary_color=d88c00"
+                style="min-width:320px;height:700px;"></div>
+</body>
+</section>
+</main>
+<footer>
+    <p class="footer-texto">&copy; 2024 Ricardo Almeida</p>
+    <p class="footer-texto">Desenvolvido por <a class="doisdev-link" target="_blank" href="http://www.doisdev.com.br">
+            DoisDev</a></p>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script src="script.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
 </body>
 
 </html>

@@ -23,19 +23,34 @@ duvidaInput.addEventListener('input', function() {
     });
 })
 
-const text = 'Sou Ricardo Almeida, advogado especializado em Direito Ambiental, e estou comprometido com soluções legais sustentáveis e eficazes. Agende uma consulta para saber mais.';
-let index = 0;
 const speed = 50;
 
-function typeWriter() {
-    if(index < text.length) {
-        document.querySelector('.hero-paragrafo').innerHTML += text.charAt(index);
-        index++;
-        setTimeout(typeWriter, speed);
+function typeWriter(element, text) {
+    let index = 0;
+    function type() {
+        if (index < text.length) {
+            element.innerHTML += text.charAt(index);
+            index++;
+            setTimeout(type, speed);
+        }
     }
+    type();
 }
 
-typeWriter();
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const element = entry.target;
+            const text = element.getAttribute('data-text');
+            typeWriter(element, text);
+            observer.unobserve(element); 
+        }
+    });
+}, { threshold: 0.5 }); 
+
+document.querySelectorAll('.texto').forEach(element => {
+    observer.observe(element);
+});
 
 const botaoSaibaMaisDuvidas = document.querySelectorAll('.btnSaibaMaisDuvidas');
 const whatsAppBtn = document.querySelector('.botao-whatsapp');
@@ -59,3 +74,20 @@ modals.forEach(modal => {
 function toggleActive(element) {
     element.classList.toggle('active');
 }
+
+$('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:false,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:5
+        }
+    }
+})
