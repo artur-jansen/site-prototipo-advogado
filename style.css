@@ -141,6 +141,13 @@ p{
     transform: rotate(180deg);
 }
 
+.hero-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 2em;
+}
+
 .hero-logo{
     width: 30%;
 }
@@ -153,7 +160,11 @@ p{
 
 .hero-paragrafo{
     color: var(--branco);
-    font-size: 1.3em;
+    font-size: 1.2em;
+}
+
+.hero-foto-adv{
+    width: 55%;
 }
 
 .botoes{
@@ -232,6 +243,7 @@ p{
     padding: 6px;
     color: var(--branco);
     text-align: center;
+    margin-bottom: 2em;
 }
 
 #duvidas-input::placeholder{
@@ -439,7 +451,7 @@ p{
     border-radius: 0px 12px 0px 12px;
     cursor: pointer;
     min-width: 100%;
-    height: 200px;
+    height: 250px;
     box-sizing: border-box;
     padding: 10px;
 }
@@ -592,6 +604,16 @@ p{
     padding-bottom: 1em;
 }
 
+.contato-container-loc{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 2em;
+}
+
 .contato-container-divs{
     display: flex;
     flex-direction: column;
@@ -669,6 +691,10 @@ p{
     border-radius: 12px;
 }
 
+.calendly-inline-widget{
+    height: 500px;
+}
+
 /* FOOTER */
 
 footer{
@@ -686,8 +712,185 @@ footer{
     font-size: 1em;
 }
 
+@media (min-width: 768px) {
+    .hero-logo{
+        width: 20%;
+    }
+    
+    .hero-paragrafo{
+        width: 80%;
+    }
+
+    .hero-foto-adv{
+        width: 45%;
+    }
+
+    .botao-borda, .botao-preenche{
+        font-size: 1.5em;
+    }
+
+    .duvidas-cards{
+        background-color: var(--dourado);
+        color: var(--branco);
+        border-radius: 8px;
+        height: 500px !important;
+        width: 400px;
+    }
+    
+    .card-body{
+        margin: 1em;
+        display: flex;
+        flex-direction: column !important;
+        justify-content: space-evenly !important;
+        height: 40%;
+    }
+    
+    .card-img-top{
+        height: 50%;
+    }
+
+    .accordion{
+        width: 80%;
+    }
+    
+    .areas-atuacao-texto{
+        padding-bottom: 3em;
+    }
+    
+    .contato-container-divs{
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .contato-barrinha{
+        width: 2px;
+        height: 200px;
+    }
+    
+    .contato-mapa{
+        height: 400px;
+    }
+}
+
 @media (min-width: 1024px) {
+    #hero{
+        background-image: url(./assets/desktop/fundo-secao-hero.png);
+        flex-direction: row;
+        align-items: end;
+    }
+
+    .hero-container{
+        align-items: flex-start;
+        gap: 1em;
+        margin-bottom: 10em;
+        margin-left: 5em;
+    }
+
+    .hero-logo{
+        margin-bottom: 2em;
+        width: 18%;
+    }
+
+    .hero-titulo{
+        text-align: left;
+    }
+
+    .hero-paragrafo{
+        width: 60%;
+        font-size: 1.5em;
+    }
+
+    .hero-foto-adv{
+        width: 60%;
+        margin: 0 5em 0 0;
+    }
+
+    #duvidas{
+        background-image: url(./assets/desktop/fundo-secao-duvidas.png);
+    }
+
+    .duvidas-container{
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .duvidas-container-cards{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #sobre{
+        background-image: url(./assets/mobile/fundo-secao-formacoes.png);
+    }
+
+    .sobre-experiencias{
+        background-image: url(./assets/mobile/fundo-secao-experiencias.png);
+    }
+
+    #areas-atuacao{
+        background-image: url(./assets/desktop/fundo-secao-atuacao.png);
+    }
+
+    #motivos{
+        background-image: url(./assets/mobile/fundo-secao-motivos.png);
+    }
+ 
     .motivos-cards{
         height: 100vh;
+    }
+
+    #contato{
+        background-image: url(./assets/desktop/fundo-secao-contato.png);
+    }
+
+    .contato-container{
+        display: flex;
+        gap: 1em;
+    }
+
+    .contato-container-divs{
+        align-items: flex-start;
+    }
+
+    .contato-mapa{
+        width: 80%;
+    }
+
+    .calendly-inline-widget{
+        width: 80% !important;
+        height: 700px;
+    }
+}
+
+@media (min-width: 1544px) {
+
+    .hero-container{
+        margin-bottom: 10em;
+    }
+
+    .hero-foto-adv{
+        width: 50%;
+    }
+
+    .hero-logo{
+        width: 12%;
+    }
+
+    .hero-titulo{
+        font-size: 3em;
+        width: 50%;
+        text-align: left;
+    }
+
+    .hero-paragrafo{
+        font-size: 2em;
+        width: 60%;
+    }
+
+    .botao-borda, .botao-preenche{
+        font-size: 2.3em;
     }
 }

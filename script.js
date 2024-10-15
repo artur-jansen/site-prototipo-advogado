@@ -23,33 +23,29 @@ duvidaInput.addEventListener('input', function() {
     });
 })
 
-const speed = 50;
-
 function typeWriter(element, text) {
     let index = 0;
     function type() {
         if (index < text.length) {
             element.innerHTML += text.charAt(index);
             index++;
-            setTimeout(type, speed);
+            setTimeout(type, 50); // Velocidade de 50 para dispositivos móveis
         }
     }
     type();
 }
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            const element = entry.target;
-            const text = element.getAttribute('data-text');
-            typeWriter(element, text);
-            observer.unobserve(element); 
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.texto').forEach(element => {
+        const text = element.getAttribute('data-text');
+
+        // Aplica efeito de digitação apenas em dispositivos móveis
+        if (window.innerWidth <= 768) {
+            typeWriter(element, text); // Efeito de digitação para mobile
+        } else {
+            element.innerHTML = text; // Texto aparece diretamente em PCs
         }
     });
-}, { threshold: 0.5 }); 
-
-document.querySelectorAll('.texto').forEach(element => {
-    observer.observe(element);
 });
 
 const botaoSaibaMaisDuvidas = document.querySelectorAll('.btnSaibaMaisDuvidas');
